@@ -1,0 +1,64 @@
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <style>
+      body {
+        background: linear-gradient(
+          135deg,
+          white 0%,
+          white 49%,
+          black 49%,
+          black 51%,
+          white 51%,
+          white 100%
+        );
+        background-repeat: repeat;
+        background-size: 20px 20px;
+      }
+      canvas {
+        background-color: white;
+      }
+      th {
+        background-color: #CEE;
+      }
+      td {
+        background-color: white;
+      }
+    </style>
+  </head>
+
+  <script type="module">
+    import init from './wasm/maze3d.js'
+    init()
+  </script>
+
+  <body>
+    <table cellspacing="0" border="1">
+      <tr><th colspan="4">一人称視点カメラ時の操作</th></tr>
+      <tr><th>動作  </th><th>キー</th><th>マウス</th><th>ゲームパッド</th></tr>
+      <tr><td>前進  </td><td>[↑] </td><td>✕   </td><td>✕          </td></tr>
+      <tr><td>後退  </td><td>[↓] </td><td>✕   </td><td>✕          </td></tr>
+      <tr><td>右旋回</td><td>[→] </td><td>✕   </td><td>✕          </td></tr>
+      <tr><td>左旋回</td><td>[←] </td><td>✕   </td><td>✕          </td></tr>
+    </table>
+
+    <table cellspacing="0" border="1">
+      <tr><th colspan="4">カメラ切替（一人称視点 ⇔ 三人称視点）</th></tr>
+      <tr><th>動作      </th><th>キー   </th><th>マウス</th><th>ゲームパッド</th></tr>
+      <tr><td>カメラ切替</td><td>[Space]</td><td>✕    </td><td>✕         </td></tr>
+    </table>
+
+    <table cellspacing="0" border="1">
+      <tr><th colspan="4">三人称視点カメラ時の操作</th></tr>
+      <tr><th>動作        </th><th>キー</th><th>マウス           </th><th>ゲームパッド</th></tr>
+      <tr><td>ズームアウト</td><td>[ｘ]</td><td>ホイール↑回転    </td><td>右トリガー２ </td></tr>
+      <tr><td>ズームイン  </td><td>[ｚ]</td><td>ホイール↓回転    </td><td>左トリガー２ </td></tr>
+      <tr><td>仰角アップ  </td><td>[↑] </td><td>左ボタン＋マウス↓</td><td>左スティック↑</td></tr>
+      <tr><td>仰角ダウン  </td><td>[↓] </td><td>左ボタン＋マウス↑</td><td>左スティック↓</td></tr>
+      <tr><td>右まわり    </td><td>[←] </td><td>左ボタン＋マウス→</td><td>左スティック←</td></tr>
+      <tr><td>左まわり    </td><td>[→] </td><td>左ボタン＋マウス←</td><td>左スティック→</td></tr>
+    </table>
+  </body>
+
+</html>
